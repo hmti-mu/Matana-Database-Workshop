@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+	--primary: #f87060;
+	--dark: #102542;
+	--white: #ffffff;
+	--green: #b9ffe8;
+}
+
+body {
+	font-family: "Poppins", sans-serif;
+	color: var(--dark);
+	font-weight: 300;
+    background-color: var(--white);
+}
+
+header{
+    background: rgb(255,255,255);
+    background: linear-gradient(40deg, rgba(255,255,255,1) 38%, rgba(184,255,240,1) 100%);
+	padding-inline: 5%;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.navLogo{
+    width: 150px;
+    height: auto;
+}
+.navLinks > a{
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+/* End Navbar */
+
+/* Head Content */
+.headContent{
+    display: grid;
+    grid-template-columns: repeat(6,minmax(0,1fr));
+    grid-template-rows: repeat(1,minmax(0,1fr));
+    row-gap: 20px;
+    column-gap: 50px;
+	margin-top: 50px;
+}
+.headLeft{
+    grid-column: span 6/span 6;
+    display: flex;
+    align-items: center;
+}
+.headRight{
+    display: none;
+}
+.hc-small {
+	margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.hc-hero {
+	font-size: 28px;
+	text-transform: capitalize;
+    line-height: 50px;
+    margin: 0 !important;
+}
+
+.headImg{
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (min-width: 500px) {
+    .hc-hero {
+        font-size: 35px;
+    }
+}
+@media only screen and (min-width: 900px) {
+    .headLeft, .headRight{
+        grid-column: span 3/span 3;
+        display: flex;
+        align-items: center;
+    }
+	.hc-hero {
+        font-size: 35px;
+        line-height: 60px;
+    }
+}
+
+@media only screen and (min-width: 1116px) {
+	.hc-hero {
+        font-size: 50px;
+        line-height: 70px;
+    }
+}
+
+/* End Head Content */
+
+/* Card */
+.cardWrapper{
+    display: grid;
+    grid-template-columns: repeat(6,minmax(0,1fr));
+    grid-template-rows: repeat(1,minmax(0,1fr));
+    row-gap: 20px;
+    column-gap: 50px;
+	margin-top: 50px;
+    padding-inline: 45px;
+}
+.cardBody{
+    grid-column: span 6/span 6;
+    border-radius: 20px;
+    box-shadow:
+    2.8px 2.8px 2.2px rgba(0, 0, 0, 0.007),
+    6.7px 6.7px 5.3px rgba(0, 0, 0, 0.01),
+    12.5px 12.5px 10px rgba(0, 0, 0, 0.013),
+    22.3px 22.3px 17.9px rgba(0, 0, 0, 0.015),
+    41.8px 41.8px 33.4px rgba(0, 0, 0, 0.017),
+    100px 100px 80px rgba(0, 0, 0, 0.02)
+    ;
+}
+.cardBody > div > img {
+    width: 100%;
+    height: 200px;
+    max-height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px 20px 0px 0px;
+}
+.cardText{
+    padding: 20px;
+}
+@media only screen and (min-width: 650px) {
+    .cardBody{
+        grid-column: span 3/span 3;
+    }
+}
+/* End Card */
+
+/* Our Doctor */
+.ourDoctors{
+    margin: 60px 0;
+}
+.doctorTitle{
+	text-align: center;
+	font-weight: 700;
+	margin: 50px 0 40px ;
+}
+
+.cardPhoto {
+	text-align: center;
+}
+
+.listDoctor {
+	list-style: none;
+	padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-bottom: 20px !important;
+}
+.imgDoctor {
+	width: 150px;
+	height: 150px;
+	object-fit: cover;
+    border-radius: 100%;
+}
+.doctorName {
+    font-size: 18px;
+	font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.miniText{
+    font-size: 13px;
+}
+@media only screen and (min-width: 880px) {
+	.listDoctor {
+        flex-direction: row;
+        margin-bottom: 0px;
+    }
+}
+/* End Our Doctor */
+
+/* Slide */
+.slider-carousel {
+    padding: 45px;
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    background-color: #cdcdcd;
+  }
+  .carousel .carousel-item {
+    position: absolute;
+    width: 100%;
+    height: 350px;
+    top: 0;
+    left: 100%;
+  }
+  .carousel-item > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .carousel .carousel-item.active {
+    left: 0;
+    transition: all 0.3s ease-out;
+  }
+  .carousel .carousel-item div {
+    height: 100%;
+  }
+/* End Slide */
+
+/* Footer */
+.footer {
+	text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+}
+.thinText{
+    font-weight: 500 !important;
+}
+/* End Footer */
